@@ -1,0 +1,20 @@
+{
+    "Parameters": {
+		"BucketName": {
+            "Description": "S3 Bucket Name",
+			"Type": "String"
+        }
+
+	},
+    "Resources": {
+        "S3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+                "BucketName": {
+					"Ref": "BucketName"
+				}
+            }
+        }
+    }
+}
